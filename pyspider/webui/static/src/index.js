@@ -97,7 +97,7 @@ $(function() {
   $("#create-project-modal form").on('submit', function(ev) {
     var $this = $(this);
     var project_name = $this.find('[name=project-name]').val()
-    if (project_name.length == 0 || project_name.search(/[^\w]/) != -1) {
+    if (project_name.length == 0) {
       $this.find('[name=project-name]').parents('.form-group').addClass('has-error');
       $this.find('[name=project-name] ~ .help-block').show();
       return false;
